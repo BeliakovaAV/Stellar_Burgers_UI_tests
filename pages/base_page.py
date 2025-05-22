@@ -40,10 +40,15 @@ class BasePage:
             EC.text_to_be_present_in_element_attribute(locator, attribute, value)
         )
 
-
     @allure.step('Перетащить элемент в корзину')
     def drag_and_drop_element(self, source, target):
-        drag_and_drop(self.driver, source, target)
+        source_locator = WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(source)
+        )
+        target_locator = WebDriverWait(self.driver, 10).until(
+            EC.visibility_of_element_located(target)
+        )
+        drag_and_drop(self.driver, source_locator, target_locator)
 
     @allure.step("Получить текущее значение cчетчика")
     def get_count(self, counter_locator):
@@ -53,7 +58,7 @@ class BasePage:
     def click_on_order_button(self):
         self.click_on_element(MainFunctionsLocators.MAKE_ORDER)
 
-    @allure.step('Подождать пока элемент не станет невидимым')  # OVERLAY ВСТАВИТЬ В НАЧАЛО КАЖДОГО ТЕСТА ЧТОБЫ МОЗИЛЛА НЕ ГЛЮЧИЛА
+    @allure.step('Подождать пока элемент станет невидимым')  # OVERLAY ВСТАВИТЬ В НАЧАЛО КАЖДОГО ТЕСТА ЧТОБЫ МОЗИЛЛА НЕ ГЛЮЧИЛА
     def wait_for_element_hide(self, locator):
         WebDriverWait(self.driver, timeout=10).until(EC.invisibility_of_element_located(locator))
         return self.driver.find_element(*locator)
