@@ -21,13 +21,12 @@ def driver(request):
     yield driver
     driver.quit()
 
-
 @pytest.fixture
 def login(driver):
-    driver.find_element(*Locators.PERSONAL_ACC).click()
-    driver.find_element(*Locators.ACC_EMAIL).send_keys(Credentials.email)
-    driver.find_element(*Locators.ACC_PASSWORD).send_keys(Credentials.password)
-    driver.find_element(*Locators.ENTER).click()
+    driver.find_element(*PrivateAccLocators.PERSONAL_ACC).click()
+    driver.find_element(*PrivateAccLocators.ACC_EMAIL).send_keys(Credentials.email)
+    driver.find_element(*PrivateAccLocators.ACC_PASSWORD).send_keys(Credentials.password)
+    driver.find_element(*PrivateAccLocators.ENTER).click()
 
     return driver
 
