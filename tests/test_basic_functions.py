@@ -72,7 +72,7 @@ class TestBasicFunctions:
         constructor_page = ConstructorPage(login)
         constructor_page.drag_ingredient_to_order()
         #Act
-        constructor_page.click_on_make_order()
+        constructor_page.click_on_order_button()
         # Assert
         assert constructor_page.wait_for_element(MainFunctionsLocators.ORDER_CONFIRMATION_SCREEN)
 

@@ -1,6 +1,10 @@
 import allure
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import re
 
-from locators.order_line_locators import OrdersLineLocators
+from locators.orders_line_locators import OrdersLineLocators
 from locators.main_functions_locators import MainFunctionsLocators
 from pages.base_page import BasePage
 
@@ -11,24 +15,26 @@ class OrdersLinePage(BasePage):
     def click_on_first_order_of_orders_line(self):
         self.click_on_element(OrdersLineLocators.ORDER)
 
-    @allure.step("Проверить, что заказ с номером {order_number} отображается в Ленте заказов")  # ПОД ВОПРОСОМ
-    def is_order_in_orders_line(self):
-        self.wait_for_element(OrdersLineLocators.ORDER_LINE_SCREEN)
+    @allure.step("Сформировать локатор номера заказа в попапе")
+    def order_popup_locator(self, order_number):
+        return By.XPATH, f"//div[contains(@class,'Modal')]//p[text()='{order_number}']"
 
-    @allure.step("Проверить, что после добавления заказа счётчик за все время увеличился на 1")
-    def check_all_time_order_counter(self):
-        before = self.get_count(OrdersLineLocators.ALL_TIME_COUNTER)
-        self.click_on_order_button(MainFunctionsLocators.MAKE_ORDER)
-        after = self.get_count(OrdersLineLocators.ALL_TIME_COUNTER)
-        return after == before + 1
+    @allure.step("Дождаться обновления счётчика «Выполнено за всё время»")
+    def check_all_time_order_counter(self, before, increment=1, timeout=10):
+        expected = str(before + increment)
+        return self.wait_for_attribute(OrdersLineLocators.ALL_TIME_COUNTER, "textContent", expected, timeout)
 
-    @allure.step("Проверить, что после добавления заказа счётчик за сегодня увеличился на 1")
-    def check_today_order_counter(self):
-        before = self.get_count(OrdersLineLocators.TODAY_COUNTER)
-        self.click_on_order_button(MainFunctionsLocators.MAKE_ORDER)
-        after = self.get_count(OrdersLineLocators.TODAY_COUNTER)
-        return after == before + 1
+    @allure.step("Дождаться обновления счётчика «Выполнено за сегодня»")
+    def check_today_order_counter(self, before, increment=1, timeout=10):
+        expected = str(before + increment)
+        return self.wait_for_attribute(OrdersLineLocators.TODAY_COUNTER, "textContent", expected, timeout)
 
-    @allure.step("Проверить, что заказ {order_number} отображается в разделе 'В работе'") #ПОД ВОПРОСОМ
-    def is_order_in_progress(self):
-        self.wait_for_element(OrdersLineLocators.IN_PROGRESS_COUNTER)
+    @allure.step("Дождаться элемента в списке В работе")
+    def wait_for_order_in_progress(self, timeout=15):
+        locator = OrdersLineLocators.IN_PROGRESS
+        old_text = self.get_text_on_element(locator)
+        WebDriverWait(self.driver, timeout).until(
+            lambda d: d.find_element(*locator).text.strip() != old_text
+        )
+        return self.get_text_on_element(locator).strip()
+

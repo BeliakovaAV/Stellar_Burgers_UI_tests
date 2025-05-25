@@ -14,4 +14,4 @@ class MainFunctionsLocators:
     MAKE_ORDER = [By.XPATH, "//button[text()='Оформить заказ']"]  # кнопка оформления заказа
     ORDER_CONFIRMATION_SCREEN = [By.CSS_SELECTOR, 'h2.Modal_modal__title_shadow__3ikwq.Modal_modal__title__2L34m.text_type_digits-large.mb-8']  # экран подтверждения заказа
     OVERLAY = [By.XPATH, ".//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]/parent::div"] #элемент загрузки
-    
+    ORDER_POPUP_CROSS = [By.CSS_SELECTOR, 'path[fill-rule="evenodd"][clip-rule="evenodd"][d^="M3.29289 3.29289"]'] # крест на окне подтверждения заказа

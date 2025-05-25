@@ -1,7 +1,7 @@
 import pytest
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-
 
 from curl import *
 from data import Credentials
@@ -21,6 +21,7 @@ def driver(request):
     yield driver
     driver.quit()
 
+
 @pytest.fixture
 def login(driver):
     driver.find_element(*PrivateAccLocators.PERSONAL_ACC).click()
@@ -29,8 +30,3 @@ def login(driver):
     driver.find_element(*PrivateAccLocators.ENTER).click()
 
     return driver
-
-
-
-
-

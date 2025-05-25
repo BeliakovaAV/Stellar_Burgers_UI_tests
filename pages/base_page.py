@@ -58,8 +58,9 @@ class BasePage:
     def click_on_order_button(self):
         self.click_on_element(MainFunctionsLocators.MAKE_ORDER)
 
-    @allure.step('Подождать пока элемент станет невидимым')  # OVERLAY ВСТАВИТЬ В НАЧАЛО КАЖДОГО ТЕСТА ЧТОБЫ МОЗИЛЛА НЕ ГЛЮЧИЛА
+    @allure.step('Подождать пока элемент станет невидимым')
     def wait_for_element_hide(self, locator):
+        self.wait_for_element(locator)
         WebDriverWait(self.driver, timeout=10).until(EC.invisibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 
