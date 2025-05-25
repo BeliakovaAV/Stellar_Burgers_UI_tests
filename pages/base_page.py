@@ -59,8 +59,7 @@ class BasePage:
         self.click_on_element(MainFunctionsLocators.MAKE_ORDER)
 
     @allure.step('Подождать пока элемент станет невидимым')
-    def wait_for_element_hide(self, locator):
-        self.wait_for_element(locator)
-        WebDriverWait(self.driver, timeout=10).until(EC.invisibility_of_element_located(locator))
+    def wait_for_element_hide(self, locator, timeout=100):
+        WebDriverWait(self.driver, timeout).until(EC.invisibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 

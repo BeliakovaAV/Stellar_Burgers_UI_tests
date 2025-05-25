@@ -80,7 +80,6 @@ class TestBasicFunctions:
     def test_make_order_button_not_visible_for_guest(self, driver):
         #Arrange
         main_page = MainPage(driver)
-        main_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
         main_page.click_on_constructor_button()
         # Assert
         assert not driver.find_elements(*MainFunctionsLocators.MAKE_ORDER)

@@ -1,8 +1,7 @@
 import allure
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import ElementClickInterceptedException
-import time
+
 
 from locators.main_functions_locators import MainFunctionsLocators
 from pages.base_page import BasePage
@@ -33,15 +32,17 @@ class ConstructorPage(BasePage):
 
     @allure.step("Кликнуть на крестик на всплывающем окне подтверждения заказа")
     def click_on_order_popup_cross(self):
-        self.click_on_element(MainFunctionsLocators.ORDER_POPUP_CROSS)
+        self.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
+        self.wait_for_element(MainFunctionsLocators.ORDER_POPUP_CROSS)
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(MainFunctionsLocators.ORDER_POPUP_CROSS)
+        )
+        self.driver.find_element(*MainFunctionsLocators.ORDER_POPUP_CROSS).click()
 
     @allure.step("Получить номер заказа из попапа")
     def order_number_from_popup(self):
         self.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
         return self.get_text_on_element(MainFunctionsLocators.ORDER_CONFIRMATION_SCREEN)
 
-    @allure.step("Сформировать локатор для заказа по номеру из попапа")
-    def get_order_locator(self, order_number):
-        return By.XPATH, f"//div[contains(@class,'orders-list')]//p[text()='{order_number}']"
 
 
