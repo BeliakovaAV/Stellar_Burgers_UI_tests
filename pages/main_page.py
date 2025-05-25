@@ -1,5 +1,4 @@
 import allure
-from selenium.common.exceptions import TimeoutException
 
 
 from locators.main_functions_locators import MainFunctionsLocators

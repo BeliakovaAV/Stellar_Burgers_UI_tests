@@ -1,0 +1,628 @@
+{
+  "uid" : "4032729d8ec77c43",
+  "name" : "Тест на проверку того, что после оформления заказа его номер появляется в разделе В работе",
+  "fullName" : "tests.test_orders_line.TestOrdersLine#test_order_in_progress",
+  "historyId" : "6acb090571e2e1cf01c110b4eddb10d6",
+  "time" : {
+    "start" : 1748192637669,
+    "stop" : 1748192644529,
+    "duration" : 6860
+  },
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert '9999' == '0232935'\n  \n  - 0232935\n  + 9999",
+  "statusTrace" : "self = <tests.test_orders_line.TestOrdersLine object at 0x0000019870A5DC50>, login = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9753dcc225497692b3f0fc0c6bed5ed5\")>\n\n    @allure.title(\"Тест на проверку того, что после оформления заказа его номер появляется в разделе В работе\")\n    def test_order_in_progress(self, login):\n        # Arrange\n        main_page = MainPage(login)\n        main_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)\n        main_page.click_on_constructor_button()\n        # Act\n        constructor_page = ConstructorPage(login)\n        constructor_page.drag_ingredient_to_order()\n        constructor_page.click_on_order_button()\n        order_conf_number = constructor_page.order_number_from_popup()\n        constructor_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)\n        constructor_page.click_on_order_popup_cross()\n        main_page.click_on_orders_line_button()\n        orders_line_page = OrdersLinePage(login)\n        in_progress_number = orders_line_page.wait_for_order_in_progress()\n        # Assert\n>       assert order_conf_number == in_progress_number\nE       AssertionError: assert '9999' == '0232935'\nE         \nE         - 0232935\nE         + 9999\n\ntests\\test_orders_line.py:111: AssertionError",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1748192607711,
+      "stop" : 1748192637364,
+      "duration" : 29653
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "login",
+    "time" : {
+      "start" : 1748192637364,
+      "stop" : 1748192637669,
+      "duration" : 305
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "AssertionError: assert '9999' == '0232935'\n  \n  - 0232935\n  + 9999",
+    "statusTrace" : "self = <tests.test_orders_line.TestOrdersLine object at 0x0000019870A5DC50>, login = <selenium.webdriver.chrome.webdriver.WebDriver (session=\"9753dcc225497692b3f0fc0c6bed5ed5\")>\n\n    @allure.title(\"Тест на проверку того, что после оформления заказа его номер появляется в разделе В работе\")\n    def test_order_in_progress(self, login):\n        # Arrange\n        main_page = MainPage(login)\n        main_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)\n        main_page.click_on_constructor_button()\n        # Act\n        constructor_page = ConstructorPage(login)\n        constructor_page.drag_ingredient_to_order()\n        constructor_page.click_on_order_button()\n        order_conf_number = constructor_page.order_number_from_popup()\n        constructor_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)\n        constructor_page.click_on_order_popup_cross()\n        main_page.click_on_orders_line_button()\n        orders_line_page = OrdersLinePage(login)\n        in_progress_number = orders_line_page.wait_for_order_in_progress()\n        # Assert\n>       assert order_conf_number == in_progress_number\nE       AssertionError: assert '9999' == '0232935'\nE         \nE         - 0232935\nE         + 9999\n\ntests\\test_orders_line.py:111: AssertionError",
+    "steps" : [ {
+      "name" : "Подождать пока элемент станет невидимым",
+      "time" : {
+        "start" : 1748192637669,
+        "stop" : 1748192638213,
+        "duration" : 544
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "['xpath', \".//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]/parent::div\"]"
+      }, {
+        "name" : "timeout",
+        "value" : "100"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Кликнуть на кнопку 'Конструктор'",
+      "time" : {
+        "start" : 1748192638213,
+        "stop" : 1748192638273,
+        "duration" : 60
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192638213,
+          "stop" : 1748192638273,
+          "duration" : 60
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192638213,
+            "stop" : 1748192638230,
+            "duration" : 17
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Перетащить ингредиент в заказ",
+      "time" : {
+        "start" : 1748192638273,
+        "stop" : 1748192638314,
+        "duration" : 41
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Перетащить элемент в корзину",
+        "time" : {
+          "start" : 1748192638274,
+          "stop" : 1748192638314,
+          "duration" : 40
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "source",
+          "value" : "['xpath', \"//img[@alt='Краторная булка N-200i']\"]"
+        }, {
+          "name" : "target",
+          "value" : "['xpath', \"//span[contains(text(),'(верх)')]\"]"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 1,
+      "hasContent" : true
+    }, {
+      "name" : "Кликнуть на кнопку 'Оформить заказ'",
+      "time" : {
+        "start" : 1748192638314,
+        "stop" : 1748192638389,
+        "duration" : 75
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192638314,
+          "stop" : 1748192638389,
+          "duration" : 75
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192638314,
+            "stop" : 1748192638333,
+            "duration" : 19
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//button[text()='Оформить заказ']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//button[text()='Оформить заказ']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Получить номер заказа из попапа",
+      "time" : {
+        "start" : 1748192638389,
+        "stop" : 1748192638460,
+        "duration" : 71
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Подождать пока элемент станет невидимым",
+        "time" : {
+          "start" : 1748192638389,
+          "stop" : 1748192638416,
+          "duration" : 27
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \".//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]/parent::div\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "100"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Получить текст элемента",
+        "time" : {
+          "start" : 1748192638416,
+          "stop" : 1748192638460,
+          "duration" : 44
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192638416,
+            "stop" : 1748192638438,
+            "duration" : 22
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['css selector', 'h2.Modal_modal__title_shadow__3ikwq.Modal_modal__title__2L34m.text_type_digits-large.mb-8']"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['css selector', 'h2.Modal_modal__title_shadow__3ikwq.Modal_modal__title__2L34m.text_type_digits-large.mb-8']"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 3,
+      "hasContent" : true
+    }, {
+      "name" : "Подождать пока элемент станет невидимым",
+      "time" : {
+        "start" : 1748192638460,
+        "stop" : 1748192642077,
+        "duration" : 3617
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "['xpath', \".//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]/parent::div\"]"
+      }, {
+        "name" : "timeout",
+        "value" : "100"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    }, {
+      "name" : "Кликнуть на крестик на всплывающем окне подтверждения заказа",
+      "time" : {
+        "start" : 1748192642077,
+        "stop" : 1748192642163,
+        "duration" : 86
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Подождать пока элемент станет невидимым",
+        "time" : {
+          "start" : 1748192642077,
+          "stop" : 1748192642079,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \".//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]/parent::div\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "100"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Подождать видимости элемента",
+        "time" : {
+          "start" : 1748192642079,
+          "stop" : 1748192642106,
+          "duration" : 27
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['css selector', 'path[fill-rule=\"evenodd\"][clip-rule=\"evenodd\"][d^=\"M3.29289 3.29289\"]']"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Кликнуть на кнопку 'Лента заказов'",
+      "time" : {
+        "start" : 1748192642163,
+        "stop" : 1748192642437,
+        "duration" : 274
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192642163,
+          "stop" : 1748192642437,
+          "duration" : 274
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192642163,
+            "stop" : 1748192642178,
+            "duration" : 15
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//p[text()='Лента Заказов']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//p[text()='Лента Заказов']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Дождаться элемента в списке В работе",
+      "time" : {
+        "start" : 1748192642437,
+        "stop" : 1748192644529,
+        "duration" : 2092
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Подождать пока элемент станет невидимым",
+        "time" : {
+          "start" : 1748192642437,
+          "stop" : 1748192642457,
+          "duration" : 20
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \".//div[contains(@class, 'Modal_modal_overlay__x2ZCr')]/parent::div\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "100"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Получить текст элемента",
+        "time" : {
+          "start" : 1748192642457,
+          "stop" : 1748192643999,
+          "duration" : 1542
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192642457,
+            "stop" : 1748192643984,
+            "duration" : 1527
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', \"//*[@id='root']/div/main/div/div/div/div[1]/ul[2]/li\")"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', \"//*[@id='root']/div/main/div/div/div/div[1]/ul[2]/li\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      }, {
+        "name" : "Получить текст элемента",
+        "time" : {
+          "start" : 1748192644527,
+          "stop" : 1748192644529,
+          "duration" : 2
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192644527,
+            "stop" : 1748192644529,
+            "duration" : 2
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "('xpath', \"//*[@id='root']/div/main/div/div/div/div[1]/ul[2]/li\")"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "('xpath', \"//*[@id='root']/div/main/div/div/div/div[1]/ul[2]/li\")"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "timeout",
+        "value" : "15"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 5,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 26,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1748192644544,
+      "stop" : 1748192646714,
+      "duration" : 2170
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_orders_line"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestOrdersLine"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-0807K0Q"
+  }, {
+    "name" : "thread",
+    "value" : "7116-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_orders_line"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "driver",
+    "value" : "'chrome'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "4032729d8ec77c43.json",
+  "parameterValues" : [ "'chrome'" ]
+}

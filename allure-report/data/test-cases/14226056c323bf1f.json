@@ -1,0 +1,353 @@
+{
+  "uid" : "14226056c323bf1f",
+  "name" : "Тест на увеличение счетчика при добавлении ингредиента в заказ",
+  "fullName" : "tests.test_basic_functions.TestBasicFunctions#test_ingredient_counter",
+  "historyId" : "89bcbd449f1ba03484ce0da962e2c49b",
+  "time" : {
+    "start" : 1748192357913,
+    "stop" : 1748192358246,
+    "duration" : 333
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1748192349664,
+      "stop" : 1748192357912,
+      "duration" : 8248
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Кликнуть на кнопку 'Конструктор'",
+      "time" : {
+        "start" : 1748192357913,
+        "stop" : 1748192358169,
+        "duration" : 256
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192357913,
+          "stop" : 1748192358169,
+          "duration" : 256
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192357913,
+            "stop" : 1748192357936,
+            "duration" : 23
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Проверить, что после добавления ингредиента счётчик увеличился на 1",
+      "time" : {
+        "start" : 1748192358169,
+        "stop" : 1748192358246,
+        "duration" : 77
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Получить текущее значение cчетчика",
+        "time" : {
+          "start" : 1748192358169,
+          "stop" : 1748192358192,
+          "duration" : 23
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Получить текст элемента",
+          "time" : {
+            "start" : 1748192358169,
+            "stop" : 1748192358192,
+            "duration" : 23
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Подождать видимости элемента",
+            "time" : {
+              "start" : 1748192358169,
+              "stop" : 1748192358184,
+              "duration" : 15
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "['xpath', \"(//ul[contains(@class,'BurgerIngredients_ingredients__list')]/a)[2]//div[contains(@class,'counter_counter__ZNLkj')]\"]"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "stepsCount" : 0,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"(//ul[contains(@class,'BurgerIngredients_ingredients__list')]/a)[2]//div[contains(@class,'counter_counter__ZNLkj')]\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 1,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "counter_locator",
+          "value" : "['xpath', \"(//ul[contains(@class,'BurgerIngredients_ingredients__list')]/a)[2]//div[contains(@class,'counter_counter__ZNLkj')]\"]"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 2,
+        "hasContent" : true
+      }, {
+        "name" : "Перетащить ингредиент в заказ",
+        "time" : {
+          "start" : 1748192358193,
+          "stop" : 1748192358222,
+          "duration" : 29
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Перетащить элемент в корзину",
+          "time" : {
+            "start" : 1748192358193,
+            "stop" : 1748192358222,
+            "duration" : 29
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "source",
+            "value" : "['xpath', \"//img[@alt='Краторная булка N-200i']\"]"
+          }, {
+            "name" : "target",
+            "value" : "['xpath', \"//span[contains(text(),'(верх)')]\"]"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      }, {
+        "name" : "Подождать и проверить, что атрибут элемента содержит текст",
+        "time" : {
+          "start" : 1748192358223,
+          "stop" : 1748192358230,
+          "duration" : 7
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"(//ul[contains(@class,'BurgerIngredients_ingredients__list')]/a)[2]//div[contains(@class,'counter_counter__ZNLkj')]\"]"
+        }, {
+          "name" : "attribute",
+          "value" : "'textContent'"
+        }, {
+          "name" : "value",
+          "value" : "'2'"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : true
+      }, {
+        "name" : "Получить текущее значение cчетчика",
+        "time" : {
+          "start" : 1748192358230,
+          "stop" : 1748192358246,
+          "duration" : 16
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Получить текст элемента",
+          "time" : {
+            "start" : 1748192358230,
+            "stop" : 1748192358246,
+            "duration" : 16
+          },
+          "status" : "passed",
+          "steps" : [ {
+            "name" : "Подождать видимости элемента",
+            "time" : {
+              "start" : 1748192358230,
+              "stop" : 1748192358238,
+              "duration" : 8
+            },
+            "status" : "passed",
+            "steps" : [ ],
+            "attachments" : [ ],
+            "parameters" : [ {
+              "name" : "locator",
+              "value" : "['xpath', \"(//ul[contains(@class,'BurgerIngredients_ingredients__list')]/a)[2]//div[contains(@class,'counter_counter__ZNLkj')]\"]"
+            }, {
+              "name" : "timeout",
+              "value" : "10"
+            } ],
+            "attachmentsCount" : 0,
+            "shouldDisplayMessage" : false,
+            "stepsCount" : 0,
+            "hasContent" : true
+          } ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"(//ul[contains(@class,'BurgerIngredients_ingredients__list')]/a)[2]//div[contains(@class,'counter_counter__ZNLkj')]\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 1,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "counter_locator",
+          "value" : "['xpath', \"(//ul[contains(@class,'BurgerIngredients_ingredients__list')]/a)[2]//div[contains(@class,'counter_counter__ZNLkj')]\"]"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 2,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 9,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 13,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1748192358247,
+      "stop" : 1748192361085,
+      "duration" : 2838
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_basic_functions"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBasicFunctions"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-0807K0Q"
+  }, {
+    "name" : "thread",
+    "value" : "7116-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_basic_functions"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "driver",
+    "value" : "'firefox'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "14226056c323bf1f.json",
+  "parameterValues" : [ "'firefox'" ]
+}

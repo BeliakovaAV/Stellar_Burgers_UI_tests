@@ -1,0 +1,437 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Тест на успешный переход на страницу Конструктора по кнопке «Конструктор»",
+    "uid" : "da757dbbaf8c017b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192232901,
+      "stop" : 1748192268246,
+      "duration" : 35345
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу Конструктора по кнопке «Конструктор»",
+    "uid" : "1eac1e156bae0406",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192279063,
+      "stop" : 1748192279579,
+      "duration" : 516
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу ленты заказов по кнопке «Лента заказов»",
+    "uid" : "a8726fad574bcf7c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192286099,
+      "stop" : 1748192286208,
+      "duration" : 109
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу ленты заказов по кнопке «Лента заказов»",
+    "uid" : "c63ce17e618cb1e3",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192298145,
+      "stop" : 1748192298408,
+      "duration" : 263
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешное появление всплывающего окна с деталями по клику на ингредиент",
+    "uid" : "4e1f006d0a8ea4ee",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192306747,
+      "stop" : 1748192306925,
+      "duration" : 178
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешное появление всплывающего окна с деталями по клику на ингредиент",
+    "uid" : "36bda849a4efa7e4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192321823,
+      "stop" : 1748192322341,
+      "duration" : 518
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешное закрывание всплывающего окна с деталями по клику на крестик",
+    "uid" : "97bf5a9db74d69d6",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192326950,
+      "stop" : 1748192329612,
+      "duration" : 2662
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешное закрывание всплывающего окна с деталями по клику на крестик",
+    "uid" : "49977bc256176d30",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192339938,
+      "stop" : 1748192340702,
+      "duration" : 764
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на увеличение счетчика при добавлении ингредиента в заказ",
+    "uid" : "ffa81f8f03e35237",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192347296,
+      "stop" : 1748192347526,
+      "duration" : 230
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на увеличение счетчика при добавлении ингредиента в заказ",
+    "uid" : "14226056c323bf1f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192357913,
+      "stop" : 1748192358246,
+      "duration" : 333
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешное оформление заказа залогиненным пользователем",
+    "uid" : "6723394ef42f4a4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192365126,
+      "stop" : 1748192366360,
+      "duration" : 1234
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешное оформление заказа залогиненным пользователем",
+    "uid" : "8d8072b34cd05f2f",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192377854,
+      "stop" : 1748192378934,
+      "duration" : 1080
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Кнопка оформления заказа недоступна для неавторизованного пользователя",
+    "uid" : "2a13f3cf65a11d82",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192401196,
+      "stop" : 1748192401291,
+      "duration" : 95
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Кнопка оформления заказа недоступна для неавторизованного пользователя",
+    "uid" : "9b85144c289860d8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192421367,
+      "stop" : 1748192421637,
+      "duration" : 270
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешное появление всплывающего окна с деталями по клику на заказ",
+    "uid" : "e9d1fc9eac381766",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192426424,
+      "stop" : 1748192431615,
+      "duration" : 5191
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешное появление всплывающего окна с деталями по клику на заказ",
+    "uid" : "d45bc0c1779f5896",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192442737,
+      "stop" : 1748192444251,
+      "duration" : 1514
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на проверку того, что заказы пользователя из раздела «История заказов» успешно отображаются на странице «Лента заказов»",
+    "uid" : "627e0302c2eeee31",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192471483,
+      "stop" : 1748192482040,
+      "duration" : 10557
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на проверку того, что заказы пользователя из раздела «История заказов» успешно отображаются на странице «Лента заказов»",
+    "uid" : "2be349b5af2e2a7c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192495611,
+      "stop" : 1748192506730,
+      "duration" : 11119
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на проверку того, что при создании нового заказа счётчик Выполнено за всё время увеличивается",
+    "uid" : "85a0f27f5019b084",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192518592,
+      "stop" : 1748192530564,
+      "duration" : 11972
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на проверку того, что при создании нового заказа счётчик Выполнено за всё время увеличивается",
+    "uid" : "7fc647129427b3a8",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192546368,
+      "stop" : 1748192553780,
+      "duration" : 7412
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на проверку того, что при создании нового заказа счётчик Выполнено за сегодня увеличивается",
+    "uid" : "846d21be9c9ddecb",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1748192563700,
+      "stop" : 1748192579799,
+      "duration" : 16099
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на проверку того, что при создании нового заказа счётчик Выполнено за сегодня увеличивается",
+    "uid" : "bd2a5c4cd8153bee",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192597965,
+      "stop" : 1748192604893,
+      "duration" : 6928
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на проверку того, что после оформления заказа его номер появляется в разделе В работе",
+    "uid" : "4032729d8ec77c43",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1748192637669,
+      "stop" : 1748192644529,
+      "duration" : 6860
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на проверку того, что после оформления заказа его номер появляется в разделе В работе",
+    "uid" : "56ae4c92f2e0fd3c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1748192690871,
+      "stop" : 1748192698071,
+      "duration" : 7200
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу восстановления пароля по кнопке «Восстановить пароль»",
+    "uid" : "d5b2b2ed91bbc5ad",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192707577,
+      "stop" : 1748192707755,
+      "duration" : 178
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу восстановления пароля по кнопке «Восстановить пароль»",
+    "uid" : "6ce0b098d3f183b7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192721228,
+      "stop" : 1748192721732,
+      "duration" : 504
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешный ввод почты и клик по кнопке «Восстановить»",
+    "uid" : "f9bf0ceca09a1e85",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192742591,
+      "stop" : 1748192744007,
+      "duration" : 1416
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешный ввод почты и клик по кнопке «Восстановить»",
+    "uid" : "947e841a3e27d4b5",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192758487,
+      "stop" : 1748192760062,
+      "duration" : 1575
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на подсвечивание поля Пароль при клике по кнопке показать/скрыть пароль",
+    "uid" : "7b975be855659410",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192764793,
+      "stop" : 1748192769554,
+      "duration" : 4761
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на подсвечивание поля Пароль при клике по кнопке показать/скрыть пароль",
+    "uid" : "244fa64d43dfe8ee",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192782846,
+      "stop" : 1748192785156,
+      "duration" : 2310
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу Личного кабинета по кнопке «Личный кабинет»",
+    "uid" : "7cd1056ad82da4c",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192812187,
+      "stop" : 1748192812293,
+      "duration" : 106
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу Личного кабинета по кнопке «Личный кабинет»",
+    "uid" : "eb023f0824bec8ce",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192822759,
+      "stop" : 1748192823041,
+      "duration" : 282
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу Истории заказов",
+    "uid" : "46fed0b38f623e69",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192829751,
+      "stop" : 1748192830759,
+      "duration" : 1008
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешный переход на страницу Истории заказов",
+    "uid" : "dc832210a97d2922",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192841958,
+      "stop" : 1748192842782,
+      "duration" : 824
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  }, {
+    "name" : "Тест на успешный выход из аккаунта",
+    "uid" : "14fa623ada8eaeac",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192849983,
+      "stop" : 1748192852126,
+      "duration" : 2143
+    },
+    "flaky" : false,
+    "parameters" : [ "'chrome'" ]
+  }, {
+    "name" : "Тест на успешный выход из аккаунта",
+    "uid" : "d355bf457261fb9e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1748192862964,
+      "stop" : 1748192864748,
+      "duration" : 1784
+    },
+    "flaky" : false,
+    "parameters" : [ "'firefox'" ]
+  } ]
+}
