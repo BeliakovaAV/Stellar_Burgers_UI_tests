@@ -1,7 +1,4 @@
 import allure
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
 
 from locators.main_functions_locators import MainFunctionsLocators
 from pages.base_page import BasePage
@@ -34,9 +31,7 @@ class ConstructorPage(BasePage):
     def click_on_order_popup_cross(self):
         self.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
         self.wait_for_element(MainFunctionsLocators.ORDER_POPUP_CROSS)
-        WebDriverWait(self.driver, 10).until(
-            EC.element_to_be_clickable(MainFunctionsLocators.ORDER_POPUP_CROSS)
-        )
+        self.wait_for_element_to_be_clickable(MainFunctionsLocators.ORDER_POPUP_CROSS)
         self.driver.find_element(*MainFunctionsLocators.ORDER_POPUP_CROSS).click()
 
     @allure.step("Получить номер заказа из попапа")
@@ -44,5 +39,22 @@ class ConstructorPage(BasePage):
         self.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
         return self.get_text_on_element(MainFunctionsLocators.ORDER_CONFIRMATION_SCREEN)
 
+    @allure.step("Подождать появления окна с информацией от ингредиенте")
+    def wait_for_ingredient_popup_appear(self):
+        return self.wait_for_element(MainFunctionsLocators.INGREDIENT_WINDOW)
 
+    @allure.step("Подождать, пока окно с информацией об ингредиенте пропадёт")
+    def wait_for_ingredient_popup_disappear(self):
+        return self.wait_for_element_hide(MainFunctionsLocators.INGREDIENT_WINDOW)
 
+    @allure.step("Подождать появления окна с подтверждением заказа")
+    def wait_for_order_confirmation_popup_appear(self):
+        return self.wait_for_element(MainFunctionsLocators.ORDER_CONFIRMATION_SCREEN)
+
+    @allure.step("Найти кнопку Сделать заказ")
+    def find_order_button(self):
+        return self.find_elements(*MainFunctionsLocators.MAKE_ORDER)
+
+    @allure.step("Кликнуть на кнопку 'Оформить заказ'")
+    def click_on_order_button(self):
+        self.click_on_element(MainFunctionsLocators.MAKE_ORDER)

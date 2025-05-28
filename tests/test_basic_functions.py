@@ -18,7 +18,7 @@ class TestBasicFunctions:
         # Act
         main_page.click_on_constructor_button()
         # Assert
-        current_url = main_page.driver.current_url
+        current_url = main_page.get_current_url()
         assert current_url == main_site
 
     @allure.title("Тест на успешный переход на страницу ленты заказов по кнопке «Лента заказов»")
@@ -28,7 +28,7 @@ class TestBasicFunctions:
         # Act
         main_page.click_on_orders_line_button()
         # Assert
-        current_url = main_page.driver.current_url
+        current_url = main_page.get_current_url()
         assert current_url == orders_line_page
 
     @allure.title("Тест на успешное появление всплывающего окна с деталями по клику на ингредиент")
@@ -40,7 +40,7 @@ class TestBasicFunctions:
         # Act
         constructor_page.click_on_ingredient()
         # Assert
-        assert constructor_page.wait_for_element(MainFunctionsLocators.INGREDIENT_WINDOW)
+        assert constructor_page.wait_for_ingredient_popup_appear()
 
     @allure.title("Тест на успешное закрывание всплывающего окна с деталями по клику на крестик")
     def test_popup_cross(self, driver):
@@ -52,7 +52,7 @@ class TestBasicFunctions:
         # Act
         constructor_page.click_on_popup_cross()
         # Assert
-        assert constructor_page.wait_for_element_hide(MainFunctionsLocators.INGREDIENT_WINDOW)
+        assert constructor_page.wait_for_ingredient_popup_disappear()
 
     @allure.title("Тест на увеличение счетчика при добавлении ингредиента в заказ")
     def test_ingredient_counter(self, driver):
@@ -67,19 +67,20 @@ class TestBasicFunctions:
     def test_order_creation(self, login):
         # Arrange
         main_page = MainPage(login)
-        main_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
+        main_page.wait_for_downloading_disappear()
         main_page.click_on_constructor_button()
         constructor_page = ConstructorPage(login)
         constructor_page.drag_ingredient_to_order()
         #Act
         constructor_page.click_on_order_button()
         # Assert
-        assert constructor_page.wait_for_element(MainFunctionsLocators.ORDER_CONFIRMATION_SCREEN)
+        assert constructor_page.wait_for_order_confirmation_popup_appear()
 
     @allure.title("Кнопка оформления заказа недоступна для неавторизованного пользователя")
     def test_make_order_button_not_visible_for_guest(self, driver):
         #Arrange
         main_page = MainPage(driver)
         main_page.click_on_constructor_button()
+        constructor_page = ConstructorPage(driver)
         # Assert
-        assert not driver.find_elements(*MainFunctionsLocators.MAKE_ORDER)
+        assert not constructor_page.find_order_button()

@@ -18,3 +18,7 @@ class MainPage(BasePage):
     @allure.step("Кликнуть на кнопку 'Лента заказов'")
     def click_on_orders_line_button(self):
         self.click_on_element(MainFunctionsLocators.ORDERS_LINE)
+
+    @allure.step("Подождать, пока анимация загрузки пропадёт")
+    def wait_for_downloading_disappear(self):
+        return self.wait_for_element_hide(MainFunctionsLocators.OVERLAY)

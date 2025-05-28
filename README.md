@@ -33,7 +33,7 @@
 | test_basic_functions.py | Тесты на базовые функции       |
 | test_orders_line.py     | Тесты Ленты заказов            |
 | test_password.py        | Тесты на восстановление пароля |
-| test_private_acc.py     | Тесты на Личного кабинета      |
+| test_private_acc.py     | Тесты Личного кабинета         |
 | conftest.py             | Фикстуры                       |
 | Locators dir            | Директория с локаторами        |
 | Pages dir               | Директория с пейджами          |

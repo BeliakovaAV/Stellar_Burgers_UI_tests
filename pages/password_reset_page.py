@@ -9,6 +9,11 @@ class PasswordResetPage(BasePage):
     def click_on_hide_pass_button(self):
         self.click_on_element(PasswordLocators.EYE_ICON)
 
-    @allure.step("подождать, пока поле Пароль не получит статус active")
+    @allure.step("Подождать, пока поле Пароль не получит статус active")
     def wait_for_password_field_active(self, timeout=10):
         return self.wait_for_attribute(PasswordLocators.PASSWORD_FIELD_EYE, "class", "active", timeout)
+
+    @allure.step("Проверить, что иконка видимости пароля активна")
+    def is_password_eye_active(self):
+        element = self.driver.find_element(*PasswordLocators.PASSWORD_FIELD_EYE)
+        return "active" in element.get_attribute("class")

@@ -18,14 +18,14 @@ class TestPrivateAcc:
         # Act
         main_page.click_on_personal_acc_button()
         # Assert
-        current_url = main_page.driver.current_url
+        current_url = main_page.get_current_url()
         assert current_url == login_page
 
     @allure.title("Тест на успешный переход на страницу Истории заказов")
     def test_orders_history(self, login):
         # Arrange
         main_page = MainPage(login)
-        main_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
+        main_page.wait_for_downloading_disappear()
         main_page.click_on_personal_acc_button()
         private_acc_page = PrivateAccPage(login)
         # Act
@@ -37,11 +37,11 @@ class TestPrivateAcc:
     def test_acc_exit(self, login):
         # Arrange
         main_page = MainPage(login)
-        main_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
+        main_page.wait_for_downloading_disappear()
         main_page.click_on_personal_acc_button()
         private_acc_page = PrivateAccPage(login)
         # Act
         private_acc_page.click_on_exit_link()
-        WebDriverWait(login, 10).until(EC.url_to_be(login_page))
+        private_acc_page.wait_for_url_change(login_page)
         # Assert
         assert login.current_url == login_page

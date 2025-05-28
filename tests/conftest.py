@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 
 from curl import *
 from data import Credentials
-from locators.private_acc_locators import PrivateAccLocators
+from pages.private_acc_page import PrivateAccPage
 
 
 @pytest.fixture(params=["chrome", "firefox"])
@@ -24,9 +24,6 @@ def driver(request):
 
 @pytest.fixture
 def login(driver):
-    driver.find_element(*PrivateAccLocators.PERSONAL_ACC).click()
-    driver.find_element(*PrivateAccLocators.ACC_EMAIL).send_keys(Credentials.email)
-    driver.find_element(*PrivateAccLocators.ACC_PASSWORD).send_keys(Credentials.password)
-    driver.find_element(*PrivateAccLocators.ENTER).click()
-
+    private_acc_page = PrivateAccPage(driver)
+    private_acc_page.login(Credentials.email, Credentials.password)
     return driver

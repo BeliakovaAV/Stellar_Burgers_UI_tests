@@ -2,6 +2,7 @@ import allure
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from seletools.actions import drag_and_drop
+from selenium.webdriver.common.by import By
 from locators.main_functions_locators import MainFunctionsLocators
 
 
@@ -54,12 +55,36 @@ class BasePage:
     def get_count(self, counter_locator):
         return int(self.get_text_on_element(counter_locator))
 
-    @allure.step("Кликнуть на кнопку 'Оформить заказ'")
-    def click_on_order_button(self):
-        self.click_on_element(MainFunctionsLocators.MAKE_ORDER)
 
     @allure.step('Подождать пока элемент станет невидимым')
     def wait_for_element_hide(self, locator, timeout=100):
         WebDriverWait(self.driver, timeout).until(EC.invisibility_of_element_located(locator))
         return self.driver.find_element(*locator)
 
+    @allure.step('Подождать перехода на другой url')
+    def wait_for_url_change(self, url):
+        return WebDriverWait(self.driver, 10).until(EC.url_to_be(url))
+
+    @allure.step('Найти элементы на странице')
+    def find_elements(self, by, value):
+        return self.driver.find_elements(by, value)
+
+    @allure.step('Найти 1 элемент на странице')
+    def find_element(self, by, value):
+        return self.driver.find_element(by, value)
+
+    @allure.step("Узнать текущий url")
+    def get_current_url(self):
+        return self.driver.current_url
+
+    @allure.step("Подождать, пока элемент станет кликабельным")
+    def wait_for_element_to_be_clickable(self, locator):
+        return WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(locator)
+        )
+
+    @allure.step("Подождать, что текст элемента изменится")
+    def wait_for_text_to_change(self, locator, old_text, timeout=15):
+        WebDriverWait(self.driver, timeout).until(
+            lambda d: d.find_element(*locator).text.strip() != old_text
+        )

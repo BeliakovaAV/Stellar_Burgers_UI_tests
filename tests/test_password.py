@@ -1,7 +1,5 @@
 import allure
 import pytest
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 from pages.main_page import MainPage
 from locators.main_functions_locators import MainFunctionsLocators
@@ -23,7 +21,7 @@ class TestPassword:
         login_page = LoginPage(driver)
         login_page.click_on_recover_pass_link()
         # Assert
-        current_url = main_page.driver.current_url
+        current_url = main_page.get_current_url()
         assert current_url == forgot_password_page
 
     @allure.title("Тест на успешный ввод почты и клик по кнопке «Восстановить»")
@@ -37,9 +35,9 @@ class TestPassword:
         # Act
         password_forgot_page.enter_email(Credentials.email)
         password_forgot_page.click_on_recover_button()
-        WebDriverWait(driver, 10).until(EC.url_to_be(reset_password_page))
+        password_forgot_page.wait_for_url_change(reset_password_page)
         # Assert
-        current_url = main_page.driver.current_url
+        current_url = main_page.get_current_url()
         assert current_url == reset_password_page
 
     @allure.title("Тест на подсвечивание поля Пароль при клике по кнопке показать/скрыть пароль")
@@ -53,9 +51,9 @@ class TestPassword:
         password_forgot_page.enter_email(Credentials.email)
         password_forgot_page.click_on_recover_button()
         password_reset_page = PasswordResetPage(driver)
-        password_reset_page.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
+        main_page.wait_for_downloading_disappear()
         # Act
         password_reset_page.click_on_hide_pass_button()
         password_reset_page.wait_for_password_field_active(timeout=5)
         # Assert
-        assert "active" in driver.find_element(*PasswordLocators.PASSWORD_FIELD_EYE).get_attribute("class")
+        assert password_reset_page.is_password_eye_active()
