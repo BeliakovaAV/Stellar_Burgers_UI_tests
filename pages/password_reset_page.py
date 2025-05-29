@@ -15,5 +15,5 @@ class PasswordResetPage(BasePage):
 
     @allure.step("Проверить, что иконка видимости пароля активна")
     def is_password_eye_active(self):
-        element = self.driver.find_element(*PasswordLocators.PASSWORD_FIELD_EYE)
+        element = self.find_element(*PasswordLocators.PASSWORD_FIELD_EYE)
         return "active" in element.get_attribute("class")

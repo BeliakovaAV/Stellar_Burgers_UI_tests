@@ -4,8 +4,6 @@ import pytest
 
 from pages.main_page import MainPage
 from pages.orders_line_page import OrdersLinePage
-from locators.orders_line_locators import OrdersLineLocators
-from locators.main_functions_locators import MainFunctionsLocators
 from pages.private_acc_page import PrivateAccPage
 from pages.constructor_page import ConstructorPage
 

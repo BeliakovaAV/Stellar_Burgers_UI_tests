@@ -1,5 +1,4 @@
 import allure
-from selenium.webdriver.common.by import By
 
 from locators.orders_line_locators import OrdersLineLocators
 from locators.main_functions_locators import MainFunctionsLocators

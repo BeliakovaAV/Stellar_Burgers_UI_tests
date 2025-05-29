@@ -2,8 +2,6 @@ import allure
 import pytest
 
 from pages.main_page import MainPage
-from locators.main_functions_locators import MainFunctionsLocators
-from locators.password_locators import PasswordLocators
 from pages.password_reset_page import PasswordResetPage
 from pages.login_page import LoginPage
 from pages.password_forgot_page import PasswordForgotPage

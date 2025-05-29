@@ -32,7 +32,8 @@ class ConstructorPage(BasePage):
         self.wait_for_element_hide(MainFunctionsLocators.OVERLAY)
         self.wait_for_element(MainFunctionsLocators.ORDER_POPUP_CROSS)
         self.wait_for_element_to_be_clickable(MainFunctionsLocators.ORDER_POPUP_CROSS)
-        self.driver.find_element(*MainFunctionsLocators.ORDER_POPUP_CROSS).click()
+        self.find_element(*MainFunctionsLocators.ORDER_POPUP_CROSS)
+        self.click_on_element(MainFunctionsLocators.ORDER_POPUP_CROSS)
 
     @allure.step("Получить номер заказа из попапа")
     def order_number_from_popup(self):

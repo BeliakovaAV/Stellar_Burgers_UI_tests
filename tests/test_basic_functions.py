@@ -4,8 +4,6 @@ import pytest
 
 from pages.main_page import MainPage
 from pages.constructor_page import ConstructorPage
-from pages.login_page import LoginPage
-from locators.main_functions_locators import MainFunctionsLocators
 from curl import *
 
 
