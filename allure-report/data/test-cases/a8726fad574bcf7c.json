@@ -1,0 +1,155 @@
+{
+  "uid" : "a8726fad574bcf7c",
+  "name" : "Тест на успешный переход на страницу ленты заказов по кнопке «Лента заказов»",
+  "fullName" : "tests.test_basic_functions.TestBasicFunctions#test_orders_line_button",
+  "historyId" : "1f3a827a722e92b37e183f1ef21ce6aa",
+  "time" : {
+    "start" : 1748192286099,
+    "stop" : 1748192286208,
+    "duration" : 109
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1748192282358,
+      "stop" : 1748192286099,
+      "duration" : 3741
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Кликнуть на кнопку 'Лента заказов'",
+      "time" : {
+        "start" : 1748192286099,
+        "stop" : 1748192286201,
+        "duration" : 102
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192286099,
+          "stop" : 1748192286201,
+          "duration" : 102
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192286099,
+            "stop" : 1748192286120,
+            "duration" : 21
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//p[text()='Лента Заказов']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//p[text()='Лента Заказов']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 3,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1748192286208,
+      "stop" : 1748192288372,
+      "duration" : 2164
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_basic_functions"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBasicFunctions"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-0807K0Q"
+  }, {
+    "name" : "thread",
+    "value" : "7116-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_basic_functions"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "driver",
+    "value" : "'chrome'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a8726fad574bcf7c.json",
+  "parameterValues" : [ "'chrome'" ]
+}

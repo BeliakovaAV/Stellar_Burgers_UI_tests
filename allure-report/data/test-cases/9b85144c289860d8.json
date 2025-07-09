@@ -1,0 +1,155 @@
+{
+  "uid" : "9b85144c289860d8",
+  "name" : "Кнопка оформления заказа недоступна для неавторизованного пользователя",
+  "fullName" : "tests.test_basic_functions.TestBasicFunctions#test_make_order_button_not_visible_for_guest",
+  "historyId" : "06b01e1269e64535e946a415c025f245",
+  "time" : {
+    "start" : 1748192421367,
+    "stop" : 1748192421637,
+    "duration" : 270
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1748192403429,
+      "stop" : 1748192421367,
+      "duration" : 17938
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Кликнуть на кнопку 'Конструктор'",
+      "time" : {
+        "start" : 1748192421367,
+        "stop" : 1748192421637,
+        "duration" : 270
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192421367,
+          "stop" : 1748192421637,
+          "duration" : 270
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192421367,
+            "stop" : 1748192421383,
+            "duration" : 16
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 3,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1748192421637,
+      "stop" : 1748192424359,
+      "duration" : 2722
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_basic_functions"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBasicFunctions"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-0807K0Q"
+  }, {
+    "name" : "thread",
+    "value" : "7116-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_basic_functions"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "driver",
+    "value" : "'firefox'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "9b85144c289860d8.json",
+  "parameterValues" : [ "'firefox'" ]
+}

@@ -1,0 +1,233 @@
+{
+  "uid" : "36bda849a4efa7e4",
+  "name" : "Тест на успешное появление всплывающего окна с деталями по клику на ингредиент",
+  "fullName" : "tests.test_basic_functions.TestBasicFunctions#test_popup_ingredient",
+  "historyId" : "a980b8faf1ce8dd42e23cf8c462ca868",
+  "time" : {
+    "start" : 1748192321823,
+    "stop" : 1748192322341,
+    "duration" : 518
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1748192309087,
+      "stop" : 1748192321823,
+      "duration" : 12736
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Кликнуть на кнопку 'Конструктор'",
+      "time" : {
+        "start" : 1748192321824,
+        "stop" : 1748192322085,
+        "duration" : 261
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192321824,
+          "stop" : 1748192322085,
+          "duration" : 261
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192321824,
+            "stop" : 1748192321844,
+            "duration" : 20
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//p[text()='Конструктор']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Кликнуть на ингредиент",
+      "time" : {
+        "start" : 1748192322085,
+        "stop" : 1748192322333,
+        "duration" : 248
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Кликнуть на элемент",
+        "time" : {
+          "start" : 1748192322085,
+          "stop" : 1748192322333,
+          "duration" : 248
+        },
+        "status" : "passed",
+        "steps" : [ {
+          "name" : "Подождать видимости элемента",
+          "time" : {
+            "start" : 1748192322085,
+            "stop" : 1748192322093,
+            "duration" : 8
+          },
+          "status" : "passed",
+          "steps" : [ ],
+          "attachments" : [ ],
+          "parameters" : [ {
+            "name" : "locator",
+            "value" : "['xpath', \"//img[@alt='Краторная булка N-200i']\"]"
+          }, {
+            "name" : "timeout",
+            "value" : "10"
+          } ],
+          "attachmentsCount" : 0,
+          "shouldDisplayMessage" : false,
+          "stepsCount" : 0,
+          "hasContent" : true
+        } ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "locator",
+          "value" : "['xpath', \"//img[@alt='Краторная булка N-200i']\"]"
+        }, {
+          "name" : "timeout",
+          "value" : "10"
+        } ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 1,
+        "hasContent" : true
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 2,
+      "hasContent" : true
+    }, {
+      "name" : "Подождать видимости элемента",
+      "time" : {
+        "start" : 1748192322333,
+        "stop" : 1748192322341,
+        "duration" : 8
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "locator",
+        "value" : "['xpath', \"//h2[text()='Детали ингредиента']\"]"
+      }, {
+        "name" : "timeout",
+        "value" : "10"
+      } ],
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 7,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1748192322342,
+      "stop" : 1748192325086,
+      "duration" : 2744
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_basic_functions"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestBasicFunctions"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-0807K0Q"
+  }, {
+    "name" : "thread",
+    "value" : "7116-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_basic_functions"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "driver",
+    "value" : "'firefox'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "36bda849a4efa7e4.json",
+  "parameterValues" : [ "'firefox'" ]
+}

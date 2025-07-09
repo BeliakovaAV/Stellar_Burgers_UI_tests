@@ -30,14 +30,15 @@
 | Название файла          | Содержание файла               |
 |-------------------------|--------------------------------|
 | Tests dir               | Директория с тестами           |
-| test_create_bookings.py | Тесты на создание бронирования |
-| test_delete_booking.py  | Тесты на удаление бронирования |
+| test_basic_functions.py | Тесты на базовые функции       |
+| test_orders_line.py     | Тесты Ленты заказов            |
+| test_password.py        | Тесты на восстановление пароля |
+| test_private_acc.py     | Тесты Личного кабинета         |
 | conftest.py             | Фикстуры                       |
-| helpers.py              | Хэлпер для тела запросов       |
-| data.py                 | Файл с URL и body запросов     |
-| auth_methods.py         | http клиент к auth методам     |
-| booking_methods.py      | http клиент к booking методам  |
-| generators.py           | Генератор данных               |
+| Locators dir            | Директория с локаторами        |
+| Pages dir               | Директория с пейджами          |
+| curl.py                 | url страниц                    |
+| data.py                 | Файл с данными для авторизации |
 | requirements.txt        | Файл с зависимостями           |
 | allure_results.dir      | Папка с отчетами Allure        |
 
